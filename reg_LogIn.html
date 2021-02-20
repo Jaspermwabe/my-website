@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reg_Log_Form</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="shorcut icon" type = "image1/png" href= "images1/logodesign.png"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+	<link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+	<link rel="stylesheet" href="includes/css/styles.css">
+	<script src="includes/js/modernizr-2.6.2.min.js"></script>
+	<script type= "text/javascript" src = "bootstrap/js/countries3.js"></script>
+	
+	<script>
+	function validate()
+      {
+        if( document.reg_log.surname.value == "" )
+         {
+            alert( "Please provide your Surname!" );
+            document.reg_log.surname.focus();
+            return false;
+         }
+		
+		 if( document.reg_log.othernames.value == "" )
+         {
+            alert( "Please provide your othernames!" );
+            document.reg_log.othernames.focus();
+            return false;
+		}
+		
+		 if( document.reg_log.phone.value == "" )
+         {
+            alert( "Please provide your Phone Number!" );
+            document.reg_log.phone.focus() ;
+            return false;
+         }
+		 
+		  if( document.reg_log.email.value == "" )
+         {
+            alert( "Please provide your Email!" );
+            document.reg_log.email.focus() ;
+            return false;
+         }
+		 var emailID = document.reg_log.email.value;
+         atpos = emailID.indexOf("@");
+         dotpos = emailID.lastIndexOf(".");
+         
+         if (atpos < 1 || ( dotpos - atpos < 2 )) 
+        // if( document.myForm.EMail.value == "" )
+         {
+		    alert( "Please provide your valid Email address!" );
+            document.reg_log.email.focus();
+            return false;
+         }
+		 
+		  if( document.reg_log.pwd.value == "" )
+         {
+            alert( "Your Password is required!" );
+            document.reg_log.pwd.focus();
+            return false;
+         }
+		}
+		
+		
+	function validate1()
+	{
+		if( document.login.email.value == "" )
+         {
+            alert( "Please provide your Email!" );
+            document.login.email.focus() ;
+            return false;
+         }
+		 var emailID = document.login.email.value;
+         atpos = emailID.indexOf("@");
+         dotpos = emailID.lastIndexOf(".");
+         
+         if (atpos < 1 || ( dotpos - atpos < 2 )) 
+        // if( document.myForm.EMail.value == "" )
+         {
+		    alert( "Please provide your valid Email address!" );
+            document.login.email.focus();
+            return false;
+         }
+		 
+		  if( document.login.pwd.value == "" )
+         {
+            alert( "Your Password is required!" );
+            document.login.pwd.focus();
+            return false;
+         }
+	}
+</script>
+	
+	<style>
+		table{
+			width:20%;
+		}
+		
+	form{
+		clear: both;
+		/*margin-left: 30%;*/
+		margin-left: 5%;
+		border: 6px ridge #00CCFF;
+		padding: 3%;
+		background-color:#00CCFF;
+	}
+	input[type="text"]{
+			border-radius: 25px;
+			height: 10%;
+			background-color:#99FFFF;
+		}
+		input[type="email"]{
+			border-radius: 25px;
+			height: 10%;
+			background-color:#99FFFF;
+		}
+		input[type="password"]{
+			border-radius: 25px;
+			height: 10%;
+			background-color:#99FFFF;
+		}
+		/*input:invalid{
+			border: 2px solid red;
+		}
+		*/
+		input:focus{
+			border: 2px solid green;
+		}
+		select{
+			border-radius: 25px;
+		}
+		
+		#frm1{
+			float:right;
+			padding: 5%;
+		}
+		
+		#frm2{
+			clear: both;
+			border: none;
+			background-color: #99FFFF;
+		}
+
+	
+	</style>
+	</head>
+<body>
+  <div class="container" >	  
+	  <div class="imgpad" style="margin-left: 25%;">
+		<a class="navbar-brand " href="/"><img src="images1/logo.png" alt="Our Logo" width = "170" height = "110" style ="float: left;" ></a>
+		</div>
+		<span id = "heading" style="float: left; text-align:center; font-style:italic; margin-left: 10%; ">
+			<h1>Registration form</h1>
+			<h3>Note: All fields are required</h3> 
+		</span>
+	  
+        <!--to be reviewed-->
+ </div>
+        <!--container of the form in a jumbotron--> 
+      <div class="container">
+          <div class="jumbotron" style="background-color: #99FFFF;">
+		  
+		  <form action="" method="post" class="form-horizontal" name="reg_log" id="frm1">
+			
+		    <table width="69%" border="0" align="center">
+              <tr>
+                <td width=""><input type="text" name="surname" id="surname" placeholder="&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;  Surname"></td>
+				</tr>
+				
+				<tr>
+                <td width=""><input type="text" name="othernames" id="othernames"  placeholder=" &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;  Other Names" required> </td>
+				</tr>
+				
+				<tr>    
+                    <td width=""><input type="text" name="phone" id="phone"  placeholder=" &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;  Enter Phone Number" maxlength="11" required > </td>
+                </tr>
+				
+				<tr>
+                    <td width=""><input type="text" name="email" id="email"  placeholder=" &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;  Enter Email" required> </td>
+				</tr>
+				
+				<tr>
+                    <td width=""><input type="text" name="pwd" id="pwd"  placeholder=" &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;  Password" required> </td>
+				</tr>
+				
+				<tr>
+                <td height="" colspan="3"><input name="Submit" type="submit" onclick="validate()" class="btn-primary" id="button" value="Register" style="margin-top:10px;"></td>
+              </tr>
+            </table>
+		  </form>
+          
+		  <div id="note">
+			<strong>PROCESS OF SUCCESSFUL APPLICATION:</strong>
+			
+			<ol style="text-align:justify; padding: 15px;" >
+				<li> Fill the Application form on the right side of this screen.</li>
+				<li> Complete the Application Process by Login in with email provided and the Password you selected below.</li>
+				<li> Complete the Bio-Data form when logged-in and provide the details of your Educational qualification</li>
+				<li>After submitting your educational qualification, you will be required to print a pre-registration form. Take it with original copies of your credential to your selected screening venue.</li>
+			</ol>
+		
+		  </div>
+		  
+		  <form method="" action="" name="login" style="background-color: #99FFFF; border: 4px inset;">
+			<input type="email" name="email" id="email" value="" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email/Username">
+			<input type="password" name="pwd" id="pwd" value="" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password">
+			<button type="button" onclick="validate1()"  class="btn-primary" style="height:45px;">Login</button>
+		  </form>
+		  
+        </div>
+	</div>
+       <footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12" style="font-size:34px; text-align: center">
+					<h6>Copyright&copy; 2018, SIWES Group One Project</h6>
+					</div><!-- end col-sm-2 -->
+				</div>
+			</div>
+		</footer>
+</body>
+</html>
+
+

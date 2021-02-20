@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Qualification</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="shorcut icon" type = "image1/png" href= "images1/logodesign.png"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+	<link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+	<link rel="stylesheet" href="includes/css/styles.css">
+	<script src="includes/js/modernizr-2.6.2.min.js"></script>
+	<script type= "text/javascript" src = "bootstrap/js/countries3.js"></script>
+	
+	<script>
+		function validate2()
+			{
+			if( document.qf_frm.pcrt.value == "" )
+			 {
+				alert( "Please provide your Provide your Primary School Certificate!" );
+				document.qf_frm.pcrt.focus();
+				return false;
+			 }
+			
+			 if( document.qf_frm.waec.value == "" )
+			 {
+				alert( "Provide your WAEC/NACO/NABTEB Result!" );
+				document.qf_frm.waec.focus();
+				return false;
+			}
+			
+			 if( document.qf_frm.dig.value == "" )
+			 {
+				alert( "Upload your Result" );
+				document.qf_frm.dig.focus() ;
+				return false;
+			 }
+			 
+			 
+			  if( document.qf_frm.ind.value == "" )
+			 {
+				alert( "Upload your Indigene Form!" );
+				document.qf_frm.ind.focus() ;
+				return false;
+			 }
+			 
+			 if( document.qf_frm.bcrt.value == "" )
+			 {
+				alert( "Upload your Birth Certificate!" );
+				document.qf_frm.bcrt.focus() ;
+				return false;
+			 }
+			 
+			 if( document.qf_frm.conduct.value == "" )
+			 {
+				alert( "Upload your Certificate of Good Conduct!" );
+				document.qf_frm.conduct.focus() ;
+				return false;
+			 }
+			 
+			  if( document.qf_frm.mrp.value == "" )
+			 {
+				alert( "Upload your Medical Report!" );
+				document.qf_frm.mrp.focus() ;
+				return false;
+			 }
+			 
+		}
+	</script>
+	
+	<style>
+		table{
+			width:20%;
+		}
+		
+	form{
+		clear: both;
+		/*margin-left: 30%;*/
+		margin-left: 5%;
+		border: 6px ridge #00CCFF;
+		padding: 3%;
+		background-color:#00CCFF;
+	}
+	input[type="text"]{
+			border-radius: 25px;
+			height: 10%;
+		}
+		input[type="email"]{
+			border-radius: 25px;
+			height: 10%;
+		}
+		input[type="password"]{
+			border-radius: 25px;
+			height: 10%;
+		}
+		select{
+			border-radius: 25px;
+		}
+		
+		#frm1{
+			float:right;
+			padding: 5%;
+		}
+		
+		#frm2{
+			clear: both;
+			border: none;
+			background-color: #99FFFF;
+		}
+
+	
+	</style>
+	</head>
+<body>
+  <div class="container" >	  
+	  <div class="imgpad" style="margin-left: 25%;">
+		<a class="navbar-brand " href="/"><img src="images1/logo.png" alt="Our Logo" width = "170" height = "110" style ="float: left;" ></a>
+		</div>
+		<span id = "heading" style="float: left; text-align:center; font-style:italic; margin-left: 10%; ">
+			<h1>Qualification form</h1>
+			<h3>Note: All fields are required</h3> 
+		</span>
+	  
+        <!--to be reviewed-->
+ </div>
+        <!--container of the form in a jumbotron--> 
+      <div class="container">
+          <div class="jumbotron" style="background-color: #99FFFF;">
+	<form action="" method="post" enctype="multipart/form-data" name="qf_frm" id="qf_frm" style="padding:5%;">
+	  <table width="98%" border="0">
+		<tr>
+			<th scope="row">Primary School Certification</th>
+			<th colspan="2"> SSCE/WAEC/NACO/NABTEB or Equivalent</th>
+		</tr>
+		<tr>
+			<th><input type="file" name="pcrt" id="pcrt" /></th>
+			<th><input type="file" name="waec" id="waec" /></th>
+		</tr>
+		<tr>
+		  <th scope="row">&nbsp;</th>
+		  <th>&nbsp;</th>
+		  </tr>
+		<tr>
+			<th scope="row">Digree/HND</th>
+			<th>Certificate of Indigenization</th>
+		</tr>
+		<tr>
+			<th><input type="file" name="dig" id="dig" /></th>
+			<th><input type="file" name="ind" id="ind" /></th>
+		</tr>
+		<tr>
+		  <th scope="row">&nbsp;</th>
+		  <th>&nbsp;</th>
+		  </tr>
+		<tr>
+			<th scope="row">Birth Certificate/Declaration of age</th>
+			<th>Certificate good Conduct</th>
+		</tr>
+		<tr>
+			<th><input type="file" name="bcrt" id="bcrt" /></th>
+			<th><input type="file" name="conduct" id="conduct" /></th>
+		</tr>
+		<tr>
+		  <th colspan="2">&nbsp;</th>
+		  </tr>
+		<tr>
+			<th colspan="2">Medical Report</th>
+		</tr>
+		<tr>
+			<th colspan="2"><input type="file" name="mrp" id="mrp" /></th>
+		</tr>
+			
+		<tr>
+		  <th colspan="2"scope="row">&nbsp;</th>
+		  <td>&nbsp;</td>
+		</tr>
+		<tr>
+		  <th colspan="2"scope="row"><input type="submit"  onclick="validate2()"  name="button" id="button" value="Submit"></th>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+</form>
+		  
+        </div>
+	</div>
+       <footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12" style="font-size:34px; text-align: center">
+					<h6>Copyright&copy; 2018, SIWES Group One Project</h6>
+					</div><!-- end col-sm-2 -->
+				</div>
+			</div>
+		</footer>
+</body>
+</html>
+
+
